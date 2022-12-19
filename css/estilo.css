@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Silkscreen:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto Mono', monospace;
+}
+
+body{
+    min-height: 1000px;
+    /*background: url(../imagenes/space.jpg); /*sirve para agregar el fondo*/
+    background-color: grey;
+}
+
+header{
+    position: fixed; /*permirtr que no se muestre el menu*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex; /*Esta linea nos permite ordenar las listas*/
+    justify-content: space-between; /*Esta linea nos permite ajustar el espscio entre los textos*/
+    align-items: center;
+    border: 10px solid red; /*Este es un diseño del baner*/
+    padding: 40px 100px; /*Estas son las dimenciones del banner*/
+    background: rgb(24, 24, 26); /*Este es el color de fondo del banner*/
+    z-index: 1; /*Este comando sirve para que todo pase por debajo del baner y no por encima debe de sr un valor positivo*/
+    transition: .3s; /*Sirve para que la tranciicón no sea abrupta*/
+}
+
+header .marca{ /*el punto nos indica que es una clase seguida del nombre que le hemos asignado*/
+    color: #fff; /*Con esta linea le asignamos el color al nombre que le dimos anteriormente*/
+    font-weight: 700; /**/
+    text-decoration: none; /*Esta linea sirve para quitar el subrrayado de las palabras*/
+    font-size: 2em; /*Definir el tamaño de letra conb respecto de la marca*/
+    text-transform: uppercase; /*Cabiar mayusculas o minisculas*/
+    letter-spacing: 5px; /*Espacio de las letras*/
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none; /*Quitar el formato de lista*/
+}
+
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin: 0 15px;
+}
+
+.banner {
+    min-height: 100vh; /*vh significa viewholder*/
+    width: 100%; /*Ajustar el ancho*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.sticky{
+    padding: 5px 100px;
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(255, 0, 0);
+    border: 5px solid red;
+}
+
+header.sticky .marca, header
+header.sticky ul li a{
+    color: rgb(255, 255, 255);
+}
+
+.banner h2{
+    color: rgb(247, 14, 216);
+    font-size: 80px; /*ajustar el tamaño del h2*/
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+.banner h2 span{
+    color: #05ec3f;
+}
+
+/* Portafolio*/
+.sec {
+    /*background: rgb(251, 4, 157);*/
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec stats .content .mxw800p h3 {
+    padding: -50px;
+    position: relative;
+    text-align: center;
+}
+
+.sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p{
+    max-width: 800%;
+    margin: 0 auto;
+}
+
+.mxw800p h3{
+    padding: 50px;
+}
+
+.mxw800p p{
+    color:#fff;
+    margin-bottom: 30px; /*Espacio del boton con el texto*/
+    font-size: 18px; /*Tamaño de la letra*/
+    font-weight: 300; 
+    letter-spacing: 1px; /*Espcio de las letras*/
+    padding: 25px;
+}
+.btn{
+    display: inline-block;
+    background: #fff;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+h3{
+    color: crimson;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Sirve para ajustar la pantalla*/
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px; /*Ajustar el margen*/
+    padding: -55px; /*Este comando nos permite ajustar el espacio de cada una de las secciones*/
+}
+
+.services .box{
+    width: 300px; /*tamaño de las cajas*/
+    margin: 0 auto; /*margen de la caja*/
+    background: rgb(255, 255, 255); /*Color de fondo*/
+    padding: 20px; /*Area*/
+    box-shadow: 0px 20px 25px rgba(246, 3, 206, 0.5); /*Sombra de las columnas*/
+}
+
+.services .box .iconBx{ /*En esta sección del código podemos editar los iconos de la sección catergorias*/
+    margin-top: 20px; /*Este comando nos permite editar las dimenciones de las cajas*/
+    text-align: center; /*Con este comando podemos centrar las imagenes de las cajas*/
+}
+
+.services .box .iconBx img{
+    max-width: 70px;
+    margin-bottom: 15px;
+}
+
+.services .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mxw800p h3{
+    text-align: center;
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.mxw800p p{
+    text-align: center;
+}
+
+.content .mxw800p h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.stats{
+    background: #000;
+    padding: 250px;
+    margin-top: -150px;
+}
+/*        Aquí          */
+.stats p {
+    color: #fff;
+}
+
+.statsBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    padding: 50px;
+}
+
+.statsBox h2{
+    color: darkorange;
+    font-size: 36px;
+}
+
+.statsBox h4{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.workBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.workBx .brand{
+    position: relative;
+    background: #990099;
+    height: 300px;
+    width: 400;
+    margin: .10 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workBx .brand:hover{
+    background: #000;
+}
+
+.workBx .brand a{
+    text-decoration: none;
+    color: rgba(12, 230, 41, 0.4);
+    text-transform: uppercase;
+}
+
+/*Estilos para la caja opacity*/
+ 
+.teamBox{
+    position: relative;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));;
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.teamBox .member{
+    position: relative;
+    background: #000;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamBox .member .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.teamBox .member .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teamBox .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.teamBox .member .details:hover{
+    opacity: 1;
+}
+
+.teamBox .member .details h2{
+    color: #05ec3f;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.teamBox .member .details h2 span{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/* Sección de Sliders*/
+
+.slider{
+    position:relative
+}
+.slider-items{
+    overflow:hidden;
+}
+
+@keyframes zoom{
+    0%{transform: scale(1.2);opacity: 0;}
+    100%{transform: scale(1);opacity: 1;}
+}
+.slider-items .item{
+    display:none;
+    position:relative;
+    max-width:800px;
+    margin:0 auto;
+    animation: zoom 1s;
+}
+
+.slider-items .item img{
+    max-width: 100%;
+    display: block;
+}
+.slider-items .item.active{
+    display: block;
+}
+
+.slider-items .item .caption{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    color: rgb(0, 0, 0);
+    background:rgba(255, 255, 255, .5);
+    font-size:20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.slider .left-slider, .slider .right-slider{
+    position: absolute;
+    height:40px;
+    width:40px;
+    background: #444444;
+    color: rgb(255, 255, 255);
+    font-size:20px;
+    text-align:center;
+    line-height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:all .5s ease;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.sec .content .mxw800p h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.slider .left-slider{
+    left:10px;
+}
+.slider .right-slider{
+    right:10px;
+}
+
+.slider .left-slider:hover{
+    background:#ff0000;
+} 
+.slider .right-slider:hover{
+    background:#ff0000;
+}
+
+/*Seción del Formulario*/
+
+.contact{
+    background: #000;
+}
+
+.contact h3, .contact p{
+    color: #fff
+}
+
+.contactForm{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contactForm form{
+    width: 100%;
+}
+
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+}
+
+.contactForm .row100 .inputBx50{
+    width: 100%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 .inputBx100{ /*Texárea*/
+    width: 100%;
+    margin: 0 20px; /*0 380  100%*/
+}
+
+.contactForm .row100 .inputBx1001{ /*Botón enviar*/
+    width: 100%;
+    margin: 0 380px; /*0 380  100%*/
+}
+
+.contactForm .row100 input, 
+.contactForm .row100 textarea{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    width: 101%;
+    padding: 10px 0px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+
+.contactForm .row100 textarea{
+    height: 50px;
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+
+.contactForm .row100 input[type="submit"]{
+    background: #fff;
+    color:#000;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#text{
+    display: block;
+    color: rgb(255, 0, 0);
+    font-weight: 500;
+    padding: 1px;  /*AAGS*/
+    text-align: left;
+    margin-top: -10px;
+}
+
+.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.sec_contact{
+    background: #000;
+    padding: 99px;
+}
+
+.sci ul{
+    display: flex;
+}
+
+.sci ul li{
+    list-style: none;
+}
+ /*Aldo Alfonso Gómez Santos*/
+.sci ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.sci ul li a img{
+    filter: invert(1);
+    max-width: 40px;
+}
+
+.sci ul li a:hover img{
+    opacity: 0.5;
+}
+
+.tabla{
+    width: 100%;
+}
+
+.tabla thead{
+    background: #000;
+    color: #fff;
+}
+
+.tabla th, .tabla td{
+    padding: 20;
+}
+
+.tabla tr:nth-child(even){
+    background: none;
+}
+
+.tabla tr:hover td{
+    background: #c0b9b9f1;
+}
+
+.tabla tfoot .td{
+    text-align: left;
+}
+
+.tabla tfoot .btn1{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    background: #000000;
+    border-radius: 20px;
+
+}
+
+#button-up{
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 4px solid transparent;
+    
+    position: fixed;
+    bottom: 50px;      /*Aldo Alfonso Gómez Santos*/
+    right: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 20px;
+
+    transition: all 300ms ease;
+    transform: scale(1);
+    box-shadow: 0px 20px, 25px rgba(0, 0, 0, 0.5);
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgb(255, 255, 255);
+}
+
+/*Sección del login*/
+.loginBox{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+
+    width: 350px;
+    height: 450px;
+
+    background: #000;
+    padding: 80px 40px;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity:0;
+
+    transform: translate(-50%, -70%);
+    z-index: 1;
+}
+
+.loginBox.active{
+    top: 75%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.loginBox .user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -50px;
+    left: 125px;
+
+    background: #fff;
+    padding: 5px;
+
+    border: 4px solid #000;
+}
+
+.loginBox .btnClose{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 30px;
+    height: 30px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loginBox h2{
+    color: #4978ff;
+    text-align: center;
+    padding: 0 0 20px;
+}
+
+.loginBox p{
+    color: #fff;
+    font-weight: 500;
+}
+
+.loginBox input{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    height: 40px;
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"]
+{
+    background: transparent;
+    border-bottom: 1px solid #fff;
+}
+.loginBox input[type="submit"]{
+    background: #ff267c;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.loginBox input[type="submit"]:hover{
+    background: #4978ff;
+    color: #262626;
+}
+
+.loginBox a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+}
+
+.loginBox a:hover{
+    text-decoration: underline;
+}
+
+/*
+.CajaOcultar h2{
+    display: grid;
+
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+/*************************************/
+/*************************************/
+/*ESTILOS PARA PANTALLAS MÁS PEQUEÑAS*/
+/*************************************/
+/*************************************/
+
+@media (max-width: 900px){
+    .toggle{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .toggle:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: rgb(251, 0, 0);
+        z-index: 1;
+        box-shadow: 0 10px 0 #ff0101;
+        transition: 0.5s;
+    }
+
+    .toggle:after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: rgb(255, 0, 0);
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    header,
+    header.sticky{
+        padding: 5px 58px;
+        background: rgb(0, 0, 0);
+    }    
+
+    header .marca,
+    header ul li a{
+        color: rgb(255, 255, 255);
+    }
+
+    header ul{
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        visibility: hidden;
+        background: rgb(255, 0, 0);
+        opacity: 0;
+    }
+
+     /* activar vista del menú */
+    header.active ul{
+        visibility: visible;
+        display: block;
+        padding-top: 20px;
+        opacity:1;
+    }
+
+    header.active ul li a{
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    
+    .banner{
+        background-position: center;
+    }
+
+    .banner h2{
+        font-size: 60px;
+        padding: 0 50px;
+    }
+
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+
+    .services .box{
+        width: 100%;
+    }
+
+    .stats{
+        padding-top: 250px;
+    }
+
+    .row100{
+        flex-direction: column;
+    }
+
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .contactForm .row100 .inputBx1001{ /*Botón enviar*/
+        width: 100%;
+        margin: 0 175px; /*0 380  100%*/
+    }
+
+    .sci{
+        margin: 20px;
+    }
+
+    .sci ul li a img{
+        font-size: 24px;
+    }
+}
+
+
+
+
